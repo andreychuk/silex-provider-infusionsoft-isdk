@@ -1,0 +1,25 @@
+{
+  "name": "andreychuk/silex-provider-infusionsoft-isdk",
+  "keywords": ["infusionsoft","isdk","silex"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Andreychuk Ivan",
+      "email": "vandreychyk@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require":{
+    "infusionsoft/php-sdk": "1.1.0",
+    "silex/silex": "~1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~3.5"
+  },
+  "minimum-stability" : "dev",
+  "autoload":{
+    "psr-0":{
+      "Andreychuk\\Provider\\":"src"
+    }
+  }
+}
