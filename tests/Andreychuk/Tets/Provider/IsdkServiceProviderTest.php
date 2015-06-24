@@ -6,8 +6,6 @@ use Silex\Application;
 use Silex\Provider\SerializerServiceProvider;
 use Andreychuk\Provider\IsdkServiceProvider;
 
-require __DIR__.'/../../../../vendor/autoload.php';
-
 /**
  * Class IsdkServiceProviderTest
  *
