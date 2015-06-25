@@ -23,11 +23,11 @@ class IsdkServiceProviderTest extends \PHPUnit_Framework_TestCase
         $redirectUri = 'http://example.com/';
         $app = new Application();
         $app->register(new IsdkServiceProvider(), array(
-            'infsoft.sdk.clientId'     => $clientId,
-            'infsoft.sdk.clientSecret' => $clientSecret,
-            'infsoft.sdk.redirectUri'  => $redirectUri,
+            'infsft.sdk.clientId'     => $clientId,
+            'infsft.sdk.clientSecret' => $clientSecret,
+            'infsft.sdk.redirectUri'  => $redirectUri,
         ));
 
-        $this->assertInstanceOf("Infusionsoft\\Infusionsoft", $app['infsoft.sdk']);
+        $this->assertInstanceOf("Infusionsoft\\Infusionsoft", $app['infsft.sdk']);
     }
 }

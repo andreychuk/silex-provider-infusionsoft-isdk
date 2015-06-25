@@ -12,11 +12,11 @@ class IsdkServiceProvider implements ServiceProviderInterface
      */
     public function register(Application $app)
     {
-        $app['infsoft.sdk'] = $app->share(function() use ($app){
+        $app['infsft.sdk'] = $app->share(function() use ($app){
             $infusionsoft = new \Infusionsoft\Infusionsoft(array(
-                'clientId'     => $app['infsoft.sdk.clientId'],
-                'clientSecret' => $app['infsoft.sdk.clientSecret'],
-                'redirectUri'  => $app['infsoft.sdk.redirectUri'],
+                'clientId'     => $app['infsft.sdk.clientId'],
+                'clientSecret' => $app['infsft.sdk.clientSecret'],
+                'redirectUri'  => $app['infsft.sdk.redirectUri'],
             ));
 
             return $infusionsoft;
