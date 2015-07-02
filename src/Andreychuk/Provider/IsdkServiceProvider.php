@@ -12,7 +12,7 @@ class IsdkServiceProvider implements ServiceProviderInterface
      */
     public function register(Application $app)
     {
-        $app['infsft.sdk'] = $app->share(function() use ($app){
+        $app['infsft.sdk'] = function() use ($app){
             $infusionsoft = new \Infusionsoft\Infusionsoft(array(
                 'clientId'     => $app['infsft.sdk.clientId'],
                 'clientSecret' => $app['infsft.sdk.clientSecret'],
@@ -20,7 +20,7 @@ class IsdkServiceProvider implements ServiceProviderInterface
             ));
 
             return $infusionsoft;
-        });
+        };
     }
 
     /**
